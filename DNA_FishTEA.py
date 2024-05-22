@@ -4,6 +4,9 @@
 # need to add where genes overlap
 # taken from retroseq_phenogram.py
 
+# To find genes overlapping with TE's from retroseq vcf file outputs, use the chrom and pos columns, then go 
+# over to Biomart, and search by co-ordinates, this will give you the list of genes that overlap.
+
 gtf_file=
 
 import matplotlib.pyplot as plt
