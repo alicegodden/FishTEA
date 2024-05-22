@@ -1,3 +1,7 @@
+# Title: Chromatin phenogram
+# Subtitle: DanRer11 genome accessibility throughout development
+# Author: Dr. Alice M. Godden
+
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 
