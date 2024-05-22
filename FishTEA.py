@@ -1,4 +1,6 @@
-0
+# Title: FishTEA
+# Subtitle: Fish transposable element analyzer for RNA-seq data
+# Author: Dr. Alice M. Godden
 
 # Step 1 of 5
 # If you haven't already, add TE location co-ordinates and chromosome name, TE family/superfamily with this
