@@ -15,11 +15,30 @@ Biomart > Filters > Region > Co-ordinates
 
 
 # FishTEA.py
-Analysis of lists of genes and TE's to analyse. This script has several steps-
+Analysis of lists of genes and TE's to analyse for danRer11. This script has several steps-
 1. Adding TE location co-ordinates
 2. Matching overlapping genes and TEs
 3. Phenogram plotting of overlapping genes and TEs
 4. & 5. Plotting bar charts counting TE family/class counts
+
+ Note-  This pipeline needs file "GRCz11_Ensembl_rmsk_TE.gtf" to run. You can make your own TE gtf file, or use TETranscripts pre-made repository from the Hammell lab:
+ https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/ 
+ You may need to change chromosome numbering from chr1 > 1 if using Ensembl reference genomes. 
+ The file of TEs (sigTEs_positions.csv) to match needs to look like this and be .csv:
+
+TE
+ERV3_DR-I:ERV1:LTR
+L1-2_DR:L1-Tx1:LINE
+Gypsy-21-LTR_DR:Gypsy:LTR
+
+The file of genes (sigGenes.csv) needs to look like this and be .csv:
+Gene_ID,Gene_start,Gene_end,Gene_name,Gene_chromosome
+ENSDARG00000000563,42732992,42873700,ttn.1,9
+ENSDARG00000001154,43941313,44015210,rimbp2,8
+
+Missing information can be generated through use of Biomart. 
+
+Data for centromere (chrcen.txt) and chromosome length (chrom_end.txt) are annotated at the end of the pipe and attached here as files.
 
 
 # chromatin_phenogram.py
