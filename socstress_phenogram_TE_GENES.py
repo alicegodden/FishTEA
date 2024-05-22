@@ -1,3 +1,7 @@
+# Title: TE genes phenogram by class
+# Subtitle: TEs phenogram by class/family
+# Author: Dr. Alice M. Godden
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.patches import Ellipse
