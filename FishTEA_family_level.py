@@ -1,7 +1,3 @@
-# Title: FishPi overlapping genes and TEs plot
-# Subtitle: Plotting at the family level not class
-# Author: Dr. Alice M. Godden
-
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.patches import Ellipse
@@ -26,6 +22,18 @@ with open('chrom_end.txt') as f:
 # Create the plot
 fig, ax = plt.subplots(figsize=(15, 8))
 
+
+def read_dopes_file(dopes_file):
+    dopes_data = []
+    with open(dopes_file) as f:
+        next(f)  # Skip header line
+        for line in f:
+            chrom, chromStart, chromEnd, name, score, strand = line.split()
+            chrom = chrom.replace("chr", "")
+            dopes_data.append((chrom, int(chromStart), int(chromEnd), name, int(score), strand))
+    return dopes_data
+
+
 # Set colors based on TE_family column
 te_colors = {
     'DNA': rocket_palette[0],       # Color 1 from rocket palette
@@ -48,6 +56,10 @@ ax.scatter(matched_df['Gene_chromosome'], matched_df['Gene_start'], label='Gene 
 centromere_data = pd.read_csv('chrcen.txt', sep='\s+', header=None, names=['chromosome', 'cen_position'])
 for _, row in centromere_data.iterrows():
     ax.plot(row['chromosome'], row['cen_position'], marker='D', markersize=5, color='grey', zorder=2, alpha=1)
+
+# Add chromatin accessibility data next to the ellipse
+for chrom, chromStart, chromEnd, name, score, strand in read_dopes_file('daniocode_hub_280355_dopes_all.txt'):
+    ax.hlines(y=[chromStart, chromEnd], xmin=int(chrom) + 0.15, xmax=int(chrom) + 0.25, color='darkred', linewidth=0.2)
 
 # Set labels and title
 plt.xlabel('Chromosome', fontsize=18, fontweight='bold')
@@ -75,7 +87,7 @@ for i, (chrom, end) in enumerate(end_data, start=1):
 
 # Adjust the y-axis limit to add space under each chromosome plot
 max_end_position = max([end for _, end in end_data])
-ax.set_ylim(-0.01 * max_end_position, max_end_position*1.01)
+ax.set_ylim(-0.01 * max_end_position, max_end_position*1.05)
 ax.set_xlim(0.4, len(unique_chromosomes) + 0.6)
 
 # Create custom legend
@@ -96,3 +108,16 @@ plt.xticks(fontsize=18, fontweight='bold')
 plt.yticks(fontsize=18, fontweight='bold')
 plt.savefig("te_genes_plot_phenogram_fishtea_family_Ov_temp.png", dpi=600)
 plt.show()
+
+
+
+
+# chromatin track was accessed from DANIO code hub_280355_dopes_all on UCSC browser
+# Unmarked open chromatin regions
+# This collection contains two tracks with regions which have an ATAC-seq signal, but without observable CRE-associated chromatin marks.
+#
+# COPEs: Constitutive Orphan Predicted Elements (COPEs) are regions which are constitutively open throughout development.
+#
+# pooled DOPEs: Dynamic Orphan Predicted Elements (DOPEs) are regions which are open only in specific developmental stages. DOPEs from all stages were pooled together into this track.
+#
+# For more information about the origin of the data, see our publication: Baranasic, Damir, et al. "Integrated annotation and analysis of genomic features reveal new types of functional elements and large-scale epigenetic phenomena in the developing zebrafish."
