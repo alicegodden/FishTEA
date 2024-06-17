@@ -44,5 +44,8 @@ Data for centromere (chrcen.txt) and chromosome length (chrom_end.txt) are annot
 # chromatin_phenogram.py
 Analysis of open regions in danRer11 genome
 
+# FishTEA_family_level.py
+Phenogram plotting of TEs that overlap with genes by family (DNA, LINE, LTR, SINE, SATELLITE, RC)
+
 # socstress_phenogram_TE_GENES.py
-Phenogram plotting of TEs that overlap with genes by class/family.
+Phenogram plotting of TEs that overlap with genes by class (DNA/RNA TE)
