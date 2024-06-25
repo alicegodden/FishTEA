@@ -41,14 +41,3 @@ Missing information can be generated through use of Biomart.
 
 Data for centromere (chrcen.txt) and chromosome length (chrom_end.txt) are annotated at the end of the pipe and attached here as files.
 
-
-# chromatin_phenogram.py
-Analysis of open regions in danRer11 genome
-
-# FishTEA_family_level.py
-Phenogram plotting of TEs that overlap with genes by family (DNA, LINE, LTR, SINE, SATELLITE, RC)
-
-# phenogram_TE_GENES.py
-Phenogram plotting of TEs that overlap with genes by class (DNA/RNA TE)
-
-
