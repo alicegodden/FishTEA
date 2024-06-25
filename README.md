@@ -8,7 +8,7 @@ All scripts use Python v 3.11.
 # Scripts and files
 All scripts and files can be found here >> https://github.com/alicegodden/FishTEA/tree/main/scripts 
 
-# DNA_FishTEA.py
+# Preparatory work (DNA_FishTEA.py)
 Analysis of TE's in the genome, plot a phenogram. Can also take the chrom and pos columns of the retroseq vcf file input to this, and put this through Biomart online and use the co-ordinates tool, to generate a list of genes that overlap with the TE insertion sites. 
 Biomart > Filters > Region > Co-ordinates
 
