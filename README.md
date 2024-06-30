@@ -16,6 +16,11 @@ $ cd FishTEA # navigate to FishTEA directory
 
 $ python FishTEA.py # to start using FishTEA 
 
+$ git clone github.com/alicegodden/fishpi
+$ cd fishpi # navigate to FishPi directory
+$ python fishpi.py # opens the GUI to use FishPi
+
+
 
 
 # Preparatory work (DNA_FishTEA.py)
