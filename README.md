@@ -9,8 +9,11 @@ All scripts use Python v 3.11.
 All scripts and files can be found here >> https://github.com/alicegodden/FishTEA/tree/main/scripts 
 
 Or to clone:
+
 $ git clone https://github.com/alicegodden/FishTEA/
+
 $ cd FishTEA # navigate to FishTEA directory
+
 $ python FishTEA.py # to start using FishTEA 
 
 
