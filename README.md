@@ -53,3 +53,8 @@ Missing information can be generated through use of Biomart.
 
 Data for centromere (chrcen.txt) and chromosome length (chrom_end.txt) are annotated at the end of the pipe and attached here as files.
 
+# Cite
+
+Please cite our pre-print whilst we undergo peer-review:
+bioRxiv 2024.12.04.626822; doi: https://doi.org/10.1101/2024.12.04.626822
+
