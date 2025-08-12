@@ -55,6 +55,7 @@ Data for centromere (chrcen.txt) and chromosome length (chrom_end.txt) are annot
 
 # Cite
 
-Please cite our pre-print whilst we undergo peer-review:
-bioRxiv 2024.12.04.626822; doi: https://doi.org/10.1101/2024.12.04.626822
+If you use this code please cite our paper:
+Godden, A.M., Silva, W.T.A.F., Kiehl, B. et al. Environmentally induced variation in sperm sRNAs is linked to gene expression and transposable elements in zebrafish offspring. Heredity 134, 234–246 (2025). https://doi.org/10.1038/s41437-025-00752-2
+
 
